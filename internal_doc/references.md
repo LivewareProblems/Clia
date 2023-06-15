@@ -25,6 +25,7 @@ Use the Github ToC in the top left hand corner to navigate
 - [Resilient LL tutorial for partial parsing](https://matklad.github.io/2023/05/21/resilient-ll-parsing-tutorial.html)
 - [Resilient LL Parsing lobsters discussion](https://lobste.rs/s/lbzdtu/resilient_ll_parsing_tutorial)
 - [guide to parsing](https://tomassetti.me/guide-parsing-algorithms-terminology/)
+- [Eclector](https://github.com/s-expressionists/Eclector)
 
 ## Compiler arch
 
@@ -74,6 +75,16 @@ Use the Github ToC in the top left hand corner to navigate
 - [Beyong Relooper, unstructured to structured control flow](https://dl.acm.org/doi/10.1145/3547621)
 - [Control Flow Reconstructability](https://dl.acm.org/doi/10.1145/2693261)
 - [CPS Soup, Guile Scheme IR](https://wingolog.org/archives/2023/05/20/approaching-cps-soup)
+- [C# compiler engineer HN comments](https://news.ycombinator.com/item?id=13915150)
+- [MS tolerant php parser](https://github.com/microsoft/tolerant-php-parser/blob/main/docs/HowItWorks.md)
+- [Rustc arch](https://doc.rust-lang.org/rustc/index.html)
+- [Responsive compilers](https://www.youtube.com/watch?app%253Ddesktop%2526v%253DN6b44kMS6OM)
+- [Modern compilers question lobsters](https://lobste.rs/s/zqa4cc/learning_modern_compilers)
+- [Next Rust Compiler](https://matklad.github.io/2023/01/25/next-rust-compiler.html)
+- [Pursuit of Performance on building a JS compiler](https://rustmagazine.org/issue-3/javascript-compiler/)
+- [HN matklad comment on conditional compilation](https://news.ycombinator.com/item?id=36269089)
+- [Query-bases compiler architectures](https://www.youtube.com/watch?app%253Ddesktop%2526v%253D3D-ngGIP4fQ)
+- [Salsa](https://salsa-rs.github.io/salsa/about_salsa.html)
 
 ## Build system
 
@@ -95,6 +106,7 @@ Note: if we integrate llbuild deeply, we may have to merge build system and comp
 - [Rye, python package manager](https://github.com/mitsuhiko/rye)
 - [Answer set programming for dependency solving](https://arxiv.org/pdf/2210.08404.pdf)
 - [Ideal Package Manager](https://hmac.dev/posts/2022-06-08-the-ideal-package-manager.html)
+- [Scripts with dependencies rosetta](https://dbohdan.com/scripts-with-dependencies)
 
 ## Type System
 
@@ -123,6 +135,8 @@ Note: if we integrate llbuild deeply, we may have to merge build system and comp
 - [Click, python cli library](https://click.palletsprojects.com/en/8.1.x/)
 - [docopt](http://docopt.org/)
 - [shell scripts in nushel](https://jpospisil.com/2023/05/25/writing-shell-scripts-in-nushell)
+- [clap tutorial](https://docs.rs/clap/latest/clap/_derive/_tutorial/index.html)
+- [Murex, a smarter shell](https://murex.rocks/)
 
 ## Language syntax and constructs
 
@@ -190,6 +204,7 @@ Note: if we integrate llbuild deeply, we may have to merge build system and comp
 - [Rust trait objects](https://tratt.net/laurie/blog/2019/a_quick_look_at_trait_objects_in_rust.html)
 - [lobster comment from Matklad on module systems](https://lobste.rs/s/u7y4lk/modules_matter_most_for_masses#c_i6a8n9)
 - [Modular Implicits](https://arxiv.org/abs/1512.01895)
+- [Matklad on modules in Rust](https://lobste.rs/s/vx8hbs/rust_module_system_encourages_poor#c_ajrll5)
 
 ## stdlib
 
@@ -256,8 +271,14 @@ Note: if we integrate llbuild deeply, we may have to merge build system and comp
 - [state of garnet 23](https://wiki.alopex.li/TheStateOfGarnet2023)
 - [Integer types static](https://tratt.net/laurie/blog/2021/static_integer_types.html)
 - [Hard-to-answer questions about code](https://dl.acm.org/doi/10.1145/1937117.1937125)
--[Iteration Inside and Out](https://journal.stuffwithstuff.com/2013/01/13/iteration-inside-and-out/)
+- [Iteration Inside and Out](https://journal.stuffwithstuff.com/2013/01/13/iteration-inside-and-out/)
 - [Filtered Iterator](https://dl.acm.org/doi/10.1145/3136014.3136030)
+- [IDEs and Macros](https://rust-analyzer.github.io/blog/2021/11/21/ides-and-macros.html)
+- [Iteration inside and out](https://journal.stuffwithstuff.com/2013/01/13/iteration-inside-and-out/)
+- [Second-class references](https://borretti.me/article/second-class-references)
+- [Ted Kaminski blog](https://www.tedinski.com/archive/)
+- [One Hundred Thousands Lines of Rust](https://matklad.github.io/2021/09/05/Rust100k.html)
+- [How to Make a 💡?](https://rust-analyzer.github.io/blog/2020/09/28/how-to-make-a-light-bulb.html)
 
 ## Tooling
 
@@ -273,6 +294,8 @@ Note: if we integrate llbuild deeply, we may have to merge build system and comp
 - [basics of python packaging](https://drivendata.co/blog/python-packaging-2023)
 - [Python makefile tricks](https://ricardoanderegg.com/posts/makefile-python-project-tricks/)
 - [failure message better in rust tests](https://bluxte.net/musings/2023/01/08/improving_failure_messages_rust_tests/)
+- [Find Usages](https://rust-analyzer.github.io/blog/2019/11/13/find-usages.html)
+- [Why LSP](https://matklad.github.io/2022/04/25/why-lsp.html)
 
 ## Capabilities/effects
 
@@ -297,3 +320,6 @@ Note: if we integrate llbuild deeply, we may have to merge build system and comp
 - [How Capabilities Work in Austral](https://borretti.me/article/how-capabilities-work-austral)
 - [Withoutboats generators blogpost](https://without.boats/tags/generators/)
 - [Exception Handling historical paper](https://dl.acm.org/doi/10.1145/361227.361230)
+- [Effekt with first class function](https://github.com/se-tuebingen/oopsla-2022-artifact/blob/main/oopsla22-paper53.pdf)
+- [The problems of effects in Rust](https://without.boats/blog/the-problem-of-effects/)
+- [Effekt](https://effekt-lang.org/docs/implementation)
