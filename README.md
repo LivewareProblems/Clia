@@ -1,4 +1,5 @@
 # Clia
+
 A glue language that has your back.
 
 Clia is in a really early design phase. Right now, you will only see design references and research.
@@ -22,7 +23,7 @@ Clia tooling and compiler are written in Rust.
 - Subtyping?
 - Set-Theoretic types?
 
-## Design 
+## Design
 
 ## Design Philosophy
 
@@ -46,6 +47,17 @@ We want to make writing glue scripts easier and less error-prone. Running them s
 - No implicit type conversion
 - No support for concurrency
 
+## Hacking
+
+Clia is pre 0.1 and actively but slowly being worked on. Right now there are only 2 active parts to work on.
+
+1. internal_doc, in which we are slowly coming up with a design
+2. tree-sitter-clia, in which i try to write a basic parser and come up with the design at the same time
+
+There is a shell.nix at the root, that should let you know easily the dependencies needed, even if you do not use nix.
+
+Contributions are welcome though
+
 ## Licence
 
-Clia is under the Apache 2.0 version.
+Clia is under the Apache 2.0 licence.
