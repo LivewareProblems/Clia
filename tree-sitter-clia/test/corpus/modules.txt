@@ -1,0 +1,52 @@
+==========
+Basic Module
+==========
+
+defmodule Test do
+
+end
+
+---
+
+(source_file
+  (module_definition
+    (alias)
+    (module_block)))
+
+====
+Module Name with a nested alias
+====
+
+defmodule Test.Bar do
+
+end
+
+---
+
+(source_file
+  (module_definition
+    (alias)
+    (module_block)))
+
+
+=======
+Function in a module
+=======
+
+defmodule Test do
+  def foo() do
+  end
+end
+
+---
+
+(source_file
+  (module_definition
+    (alias)
+    (module_block
+      (function_definition
+        (identifier)
+        (parameter_list)
+        (function_block)
+    ))))
+

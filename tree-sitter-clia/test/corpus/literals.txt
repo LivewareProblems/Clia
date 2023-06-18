@@ -1,0 +1,46 @@
+===
+Integer
+===
+
+defmodule Test do
+  def foo() do
+    24849
+  end
+end
+
+---
+
+(source_file
+  (module_definition
+    (alias)
+    (module_block
+      (function_definition
+        (identifier)
+        (parameter_list)
+        (function_block
+          (literal
+            (integer)))))))
+
+===
+Atom
+===
+
+defmodule Test do
+  def foo() do
+    :baz
+  end
+end
+
+---
+
+(source_file
+  (module_definition
+    (alias)
+    (module_block
+      (function_definition
+        (identifier)
+        (parameter_list)
+        (function_block
+          (literal
+            (atom
+              (identifier))))))))

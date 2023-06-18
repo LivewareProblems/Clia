@@ -12,7 +12,8 @@ the features we want:
   `clap`")
 - Typed (Crochet level?)
 
-For more complete analysis [we have a whole rationale in a google doc](https://docs.google.com/document/d/1vI4UgBH7CXGvSFOYNchrusikFqN46-sp6Ph7tVZN5K0/edit?usp=sharing)
+For more complete analysis [we have a whole rationale in a google
+doc](https://docs.google.com/document/d/1vI4UgBH7CXGvSFOYNchrusikFqN46-sp6Ph7tVZN5K0/edit?usp=sharing)
 
 ## Background
 

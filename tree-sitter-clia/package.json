@@ -1,0 +1,11 @@
+{
+  "name": "tree-sitter-clia",
+  "version": "0.0.1",
+  "description": "Tree-sitter grammar for Clia programming language",
+  "main": "bindings/node",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
