@@ -26,6 +26,9 @@ Use the Github ToC in the top left hand corner to navigate
 - [Resilient LL Parsing lobsters discussion](https://lobste.rs/s/lbzdtu/resilient_ll_parsing_tutorial)
 - [guide to parsing](https://tomassetti.me/guide-parsing-algorithms-terminology/)
 - [Eclector](https://github.com/s-expressionists/Eclector)
+- [tree-sitter-elixir](https://github.com/elixir-lang/tree-sitter-elixir/)
+- [Tree-sitter](http://tree-sitter.github.io/tree-sitter/)
+- [Pratt Parsers](http://journal.stuffwithstuff.com/2011/03/19/pratt-parsers-expression-parsing-made-easy/)
 
 ## Compiler arch
 
@@ -85,6 +88,7 @@ Use the Github ToC in the top left hand corner to navigate
 - [HN matklad comment on conditional compilation](https://news.ycombinator.com/item?id=36269089)
 - [Query-bases compiler architectures](https://www.youtube.com/watch?app%253Ddesktop%2526v%253D3D-ngGIP4fQ)
 - [Salsa](https://salsa-rs.github.io/salsa/about_salsa.html)
+- [Responsive Compilers - Nicholas Matsakis on Salsa](https://www.youtube.com/watch?app%253Ddesktop%2526v%253DN6b44kMS6OM)
 
 ## Build system
 
@@ -124,6 +128,7 @@ Note: if we integrate llbuild deeply, we may have to merge build system and comp
 - [Custom-Width Integer Types](https://alic.dev/blog/custom-bitwidth.html)
 - [Type System for Fearless concurrency](https://dl.acm.org/doi/pdf/10.1145/3519939.3523443)
 - [Niki Vazou, refinement types and liquid types researcher](https://namin.seas.harvard.edu/publications?page=1)
+- [Why the Sorbet typechecker is fast](https://blog.nelhage.com/post/why-sorbet-is-fast/)
 
 ## CLI handling
 
@@ -166,6 +171,7 @@ Note: if we integrate llbuild deeply, we may have to merge build system and comp
 - [Big FAQ on Mojo](https://mojodojo.dev/mojo_team_answers.html#aot-vs-jit)
 - [PLT Redex, debugging operational semantics](https://redex.racket-lang.org/index.html)
 - [K, an environemnt to define languages](https://kframework.org/)
+- [Defaults Affect Inference](https://faultlore.com/blah/defaults-affect-inference/)
 
 ## Polymorphism and modules
 
