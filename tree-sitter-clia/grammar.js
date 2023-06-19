@@ -35,16 +35,31 @@ module.exports = grammar({
 
     literal: $ => choice(
       $.integer,
-      $.atom
+      $.atom,
+      $.float
       // TODO: add more literals
     ),
 
-    integer: $ => /\d+/,
+    integer: $ => sep1(/\d+/, "_"),
+
+    float: $ => seq(
+      $.integer,
+      '.',
+      $.integer,
+      optional($._float_scientific_part)
+    ),
+
+    _float_scientific_part: $ => seq(
+      /[eE]/,
+      optional(choice("-", "+")),
+      $.integer
+    ),
 
     atom: $ => seq(
       ':',
       $.identifier
       // TODO: handle full binary atoms and aliases
+      // TODO: Handle proper atoms
     ),
 
     module_definition: $ => seq(
@@ -53,7 +68,7 @@ module.exports = grammar({
       $.module_block
     ),
 
-    alias: $ => /[A-Z][a-z|.|A-Z]+[a-z|A-Z]/, // TODO: make sure that caps after dot
+    alias: $ => /[A-Z][a-z|.|A-Z]+[a-z|A-Z]/, // TODO: make sure that this is right
 
     module_block: $ => seq(
       'do',
@@ -61,6 +76,10 @@ module.exports = grammar({
       'end'
     ),
 
-    identifier: $ => /[a-z|_]+/
-  }
+    identifier: $ => /[a-z|_]+/ // TODO: make sure this is right
+  },
 });
+
+function sep1(rule, separator) {
+  return seq(rule, repeat(seq(separator, rule)));
+}

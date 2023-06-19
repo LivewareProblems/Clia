@@ -44,3 +44,54 @@ end
           (literal
             (atom
               (identifier))))))))
+
+===
+Float decimal
+===
+
+defmodule Test do
+  def foo() do
+    03243.232
+  end
+end
+
+---
+
+(source_file
+  (module_definition
+    (alias)
+    (module_block
+      (function_definition
+        (identifier)
+        (parameter_list)
+        (function_block
+          (literal
+            (float
+              (integer)
+              (integer))))))))
+
+===
+Float scientific
+===
+
+defmodule Test do
+  def foo() do
+    3.232E+10
+  end
+end
+
+---
+
+(source_file
+  (module_definition
+    (alias)
+    (module_block
+      (function_definition
+        (identifier)
+        (parameter_list)
+        (function_block
+          (literal
+            (float
+              (integer)
+              (integer)
+              (integer))))))))
