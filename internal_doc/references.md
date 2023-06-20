@@ -111,6 +111,7 @@ Note: if we integrate llbuild deeply, we may have to merge build system and comp
 - [Answer set programming for dependency solving](https://arxiv.org/pdf/2210.08404.pdf)
 - [Ideal Package Manager](https://hmac.dev/posts/2022-06-08-the-ideal-package-manager.html)
 - [Scripts with dependencies rosetta](https://dbohdan.com/scripts-with-dependencies)
+- [Taxonomy of Package Management](https://plos-workshop.org/2019/preprint/plos19-muhammad.pdf)
 
 ## Type System
 
@@ -230,6 +231,7 @@ Note: if we integrate llbuild deeply, we may have to merge build system and comp
 - [Typical, data interchange format with AlgDT](https://github.com/stepchowfun/typical)
 - [Kaitai struct, binary parsers](https://kaitai.io/)
 - [fq, language and decoders for binary and text formats](https://github.com/wader/fq)
+- [Factors to consider for logging framework](https://betterstack.com/community/guides/logging/logging-framework/)
 
 ## Language Features/UX
 
