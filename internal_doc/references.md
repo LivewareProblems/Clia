@@ -286,7 +286,8 @@ Note: if we integrate llbuild deeply, we may have to merge build system and comp
 - [Second-class references](https://borretti.me/article/second-class-references)
 - [Ted Kaminski blog](https://www.tedinski.com/archive/)
 - [One Hundred Thousands Lines of Rust](https://matklad.github.io/2021/09/05/Rust100k.html)
-- [How to Make a 💡?](https://rust-analyzer.github.io/blog/2020/09/28/how-to-make-a-light-bulb.html)
+- [How to handle filename in shell](https://dwheeler.com/essays/filenames-in-shell.html)
+- [Fixing Unix/linus filename](https://dwheeler.com/essays/fixing-unix-linux-filenames.html)
 
 ## Tooling
 
@@ -304,6 +305,7 @@ Note: if we integrate llbuild deeply, we may have to merge build system and comp
 - [failure message better in rust tests](https://bluxte.net/musings/2023/01/08/improving_failure_messages_rust_tests/)
 - [Find Usages](https://rust-analyzer.github.io/blog/2019/11/13/find-usages.html)
 - [Why LSP](https://matklad.github.io/2022/04/25/why-lsp.html)
+- [How to Make a 💡?](https://rust-analyzer.github.io/blog/2020/09/28/how-to-make-a-light-bulb.html)
 
 ## Capabilities/effects
 
