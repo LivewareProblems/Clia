@@ -1,0 +1,173 @@
+===
+Addition
+===
+
+defmodule Test do
+  def foo() do
+    1 + 2
+  end
+end
+
+---
+
+(source_file
+  (module_definition
+    (alias)
+    (module_block
+      (function_definition
+        (identifier)
+        (parameter_list)
+        (function_block
+          (binary_op
+            (integer)
+            (integer)))))))
+
+===
+Sub
+===
+
+defmodule Test do
+  def foo() do
+    1 - 2
+  end
+end
+
+---
+
+(source_file
+  (module_definition
+    (alias)
+    (module_block
+      (function_definition
+        (identifier)
+        (parameter_list)
+        (function_block
+          (binary_op
+            (integer)
+            (integer)))))))
+
+===
+Mul
+===
+
+defmodule Test do
+  def foo() do
+    1 * 2
+  end
+end
+
+---
+
+(source_file
+  (module_definition
+    (alias)
+    (module_block
+      (function_definition
+        (identifier)
+        (parameter_list)
+        (function_block
+          (binary_op
+            (integer)
+            (integer)))))))
+
+===
+Divide
+===
+
+defmodule Test do
+  def foo() do
+    1 / 2
+  end
+end
+
+---
+
+(source_file
+  (module_definition
+    (alias)
+    (module_block
+      (function_definition
+        (identifier)
+        (parameter_list)
+        (function_block
+          (binary_op
+            (integer)
+            (integer)))))))
+
+=====================================
+precedence on the same level falls back to associativity
+=====================================
+
+1 * 2 / 3
+1 + 2 - 3
+
+---
+
+(source_file
+  (binary_op (binary_op (integer) (integer)) (integer))
+  (binary_op (binary_op (integer) (integer)) (integer)))
+
+=====================================
+binary left associative
+=====================================
+
+1 ** 2 ** 3
+
+1 * 2 * 3
+1 / 2 / 3
+
+1 + 2 + 3
+1 - 2 - 3
+
+---
+
+(source_file
+  (binary_op (binary_op (integer) (integer)) (integer))
+  (binary_op (binary_op (integer) (integer)) (integer))
+  (binary_op (binary_op (integer) (integer)) (integer))
+  (binary_op (binary_op (integer) (integer)) (integer))
+  (binary_op (binary_op (integer) (integer)) (integer)))
+
+=====================================
+precedence on different levels
+=====================================
+
+1 + 2 * 3 - 4
+1 ** 2 + 3 ** 4
+
+---
+(source_file
+  (binary_op
+    (binary_op
+      (integer)
+      (binary_op
+        (integer)
+        (integer)))
+    (integer))
+  (binary_op
+    (binary_op
+      (integer)
+      (integer))
+    (binary_op
+      (integer)
+      (integer))))
+
+=====================================
+plus minus
+=====================================
+
+1+2
+1 + 2
+1+ 2
+
+---
+
+(source_file
+  (integer)
+  (integer)
+  (binary_op
+    (integer)
+    (integer))
+  (binary_op
+    (integer)
+    (integer)))

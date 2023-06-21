@@ -1,27 +1,4 @@
 ===
-Integer
-===
-
-defmodule Test do
-  def foo() do
-    24849
-  end
-end
-
----
-
-(source_file
-  (module_definition
-    (alias)
-    (module_block
-      (function_definition
-        (identifier)
-        (parameter_list)
-        (function_block
-          (literal
-            (integer)))))))
-
-===
 Atom
 ===
 
@@ -41,9 +18,8 @@ end
         (identifier)
         (parameter_list)
         (function_block
-          (literal
-            (atom
-              (identifier))))))))
+          (atom
+            (identifier)))))))
 
 ===
 Float decimal
@@ -65,10 +41,7 @@ end
         (identifier)
         (parameter_list)
         (function_block
-          (literal
-            (float
-              (integer)
-              (integer))))))))
+          (float))))))
 
 ===
 Float scientific
@@ -90,8 +63,6 @@ end
         (identifier)
         (parameter_list)
         (function_block
-          (literal
-            (float
-              (integer)
-              (integer)
-              (integer))))))))
+          (float))))))
+
+

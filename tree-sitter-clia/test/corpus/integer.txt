@@ -1,0 +1,351 @@
+===
+Integer
+===
+
+defmodule Test do
+  def foo() do
+    24849
+  end
+end
+
+---
+
+(source_file
+  (module_definition
+    (alias)
+    (module_block
+      (function_definition
+        (identifier)
+        (parameter_list)
+        (function_block
+          (integer))))))
+
+===
+Integer with separator
+===
+
+defmodule Test do
+  def foo() do
+    24_84_9
+  end
+end
+
+---
+
+(source_file
+  (module_definition
+    (alias)
+    (module_block
+      (function_definition
+        (identifier)
+        (parameter_list)
+        (function_block
+          (integer))))))
+
+===
+Negative Integer
+===
+
+defmodule Test do
+  def foo() do
+    -24849
+  end
+end
+
+---
+
+(source_file
+  (module_definition
+    (alias)
+    (module_block
+      (function_definition
+        (identifier)
+        (parameter_list)
+        (function_block
+          (integer))))))
+
+===
+Positive Integer
+===
+
+defmodule Test do
+  def foo() do
+    +24849
+  end
+end
+
+---
+
+(source_file
+  (module_definition
+    (alias)
+    (module_block
+      (function_definition
+        (identifier)
+        (parameter_list)
+        (function_block
+          (integer))))))
+
+===
+Bin Integer
+===
+
+defmodule Test do
+  def foo() do
+    0b1101001
+  end
+end
+
+---
+
+(source_file
+  (module_definition
+    (alias)
+    (module_block
+      (function_definition
+        (identifier)
+        (parameter_list)
+        (function_block
+          (integer))))))
+
+===
+Bin Integer with separator
+===
+
+defmodule Test do
+  def foo() do
+    0b110_10_01
+  end
+end
+
+---
+
+(source_file
+  (module_definition
+    (alias)
+    (module_block
+      (function_definition
+        (identifier)
+        (parameter_list)
+        (function_block
+          (integer))))))
+
+===
+Bin Negative Integer
+===
+
+defmodule Test do
+  def foo() do
+    -0b1101001
+  end
+end
+
+---
+
+(source_file
+  (module_definition
+    (alias)
+    (module_block
+      (function_definition
+        (identifier)
+        (parameter_list)
+        (function_block
+          (integer))))))
+
+===
+Bin Positive Integer
+===
+
+defmodule Test do
+  def foo() do
+    +0b1101001
+  end
+end
+
+---
+
+(source_file
+  (module_definition
+    (alias)
+    (module_block
+      (function_definition
+        (identifier)
+        (parameter_list)
+        (function_block
+          (integer))))))
+
+===
+Oct Integer
+===
+
+defmodule Test do
+  def foo() do
+    0o1342567
+  end
+end
+
+---
+
+(source_file
+  (module_definition
+    (alias)
+    (module_block
+      (function_definition
+        (identifier)
+        (parameter_list)
+        (function_block
+          (integer))))))
+
+===
+Oct Integer with separator
+===
+
+defmodule Test do
+  def foo() do
+    0o13_425_67
+  end
+end
+
+---
+
+(source_file
+  (module_definition
+    (alias)
+    (module_block
+      (function_definition
+        (identifier)
+        (parameter_list)
+        (function_block
+          (integer))))))
+
+===
+Oct Negative Integer
+===
+
+defmodule Test do
+  def foo() do
+    -0o1342567
+  end
+end
+
+---
+
+(source_file
+  (module_definition
+    (alias)
+    (module_block
+      (function_definition
+        (identifier)
+        (parameter_list)
+        (function_block
+          (integer))))))
+
+===
+Oct Positive Integer
+===
+
+defmodule Test do
+  def foo() do
+    +0o1342567
+  end
+end
+
+---
+
+(source_file
+  (module_definition
+    (alias)
+    (module_block
+      (function_definition
+        (identifier)
+        (parameter_list)
+        (function_block
+          (integer))))))
+
+===
+Hex Integer
+===
+
+defmodule Test do
+  def foo() do
+    0x130AB59efc285
+  end
+end
+
+---
+
+(source_file
+  (module_definition
+    (alias)
+    (module_block
+      (function_definition
+        (identifier)
+        (parameter_list)
+        (function_block
+          (integer))))))
+
+===
+Hex Integer with separator
+===
+
+defmodule Test do
+  def foo() do
+    0x13_0AB59e_fc285
+  end
+end
+
+---
+
+(source_file
+  (module_definition
+    (alias)
+    (module_block
+      (function_definition
+        (identifier)
+        (parameter_list)
+        (function_block
+          (integer))))))
+
+===
+Hex Negative Integer
+===
+
+defmodule Test do
+  def foo() do
+    -0x130AB59efc285
+  end
+end
+
+---
+
+(source_file
+  (module_definition
+    (alias)
+    (module_block
+      (function_definition
+        (identifier)
+        (parameter_list)
+        (function_block
+          (integer))))))
+
+===
+Hex Positive Integer
+===
+
+defmodule Test do
+  def foo() do
+    +0x130AB59efc285
+  end
+end
+
+---
+
+(source_file
+  (module_definition
+    (alias)
+    (module_block
+      (function_definition
+        (identifier)
+        (parameter_list)
+        (function_block
+          (integer))))))
