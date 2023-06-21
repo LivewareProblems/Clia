@@ -1,10 +1,21 @@
-{ pkgs ? import <nixpkgs> { } }:
-
-with pkgs;
+let
+  rust-overlay = builtins.fetchTarball
+    "https://github.com/oxalica/rust-overlay/archive/master.tar.gz";
+  pkgs = import <nixpkgs> { overlays = [ (import rust-overlay) ]; };
+  toolchain = pkgs.rust-bin.fromRustupToolchainFile ./toolchain.toml;
+in with pkgs;
 let node = nodejs_20;
 
-in mkShell {
-  buildInputs = [ node pkgs.tree-sitter ];
+in pkgs.mkShell {
+  packages = [
+    toolchain
+    node
+    pkgs.tree-sitter
+    pkgs.rustup
+    pkgs.rust-analyzer-unwrapped
+  ];
 
   LANG = "en_US.UTF-8";
+  RUST_SRC_PATH = "${toolchain}/lib/rustlib/src/rust/library";
+
 }
