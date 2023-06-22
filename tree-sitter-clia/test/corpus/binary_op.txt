@@ -163,8 +163,9 @@ plus minus
 ---
 
 (source_file
-  (integer)
-  (integer)
+  (binary_op
+    (integer)
+    (integer))
   (binary_op
     (integer)
     (integer))

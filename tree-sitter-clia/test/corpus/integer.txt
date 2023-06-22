@@ -62,7 +62,8 @@ end
         (identifier)
         (parameter_list)
         (function_block
-          (integer))))))
+          (unary_op
+            (integer)))))))
 
 ===
 Positive Integer
@@ -84,7 +85,8 @@ end
         (identifier)
         (parameter_list)
         (function_block
-          (integer))))))
+          (unary_op
+            (integer)))))))
 
 ===
 Bin Integer
@@ -150,7 +152,8 @@ end
         (identifier)
         (parameter_list)
         (function_block
-          (integer))))))
+          (unary_op
+            (integer)))))))
 
 ===
 Bin Positive Integer
@@ -172,7 +175,8 @@ end
         (identifier)
         (parameter_list)
         (function_block
-          (integer))))))
+          (unary_op
+            (integer)))))))
 
 ===
 Oct Integer
@@ -238,7 +242,8 @@ end
         (identifier)
         (parameter_list)
         (function_block
-          (integer))))))
+          (unary_op
+            (integer)))))))
 
 ===
 Oct Positive Integer
@@ -260,7 +265,8 @@ end
         (identifier)
         (parameter_list)
         (function_block
-          (integer))))))
+          (unary_op
+            (integer)))))))
 
 ===
 Hex Integer
@@ -326,7 +332,8 @@ end
         (identifier)
         (parameter_list)
         (function_block
-          (integer))))))
+          (unary_op
+            (integer)))))))
 
 ===
 Hex Positive Integer
@@ -348,4 +355,5 @@ end
         (identifier)
         (parameter_list)
         (function_block
-          (integer))))))
+          (unary_op
+            (integer)))))))

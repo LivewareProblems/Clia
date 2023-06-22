@@ -16,10 +16,10 @@ const HEX_DIGITS = /[0-9a-fA-F]+/;
 
 // TODO: Actually handle unary operator so that binary operators do not get eaten without spaces
 // TODO: and so that you can negate a variable
-const NUMBER_DEC = seq(optional(choice(...UNARY_OPS)), sep1(DIGITS, "_"));
-const NUMBER_BIN = seq(optional(choice(...UNARY_OPS)), "0b", sep1(BIN_DIGITS, "_"));
-const NUMBER_OCT = seq(optional(choice(...UNARY_OPS)), "0o", sep1(OCT_DIGITS, "_"));
-const NUMBER_HEX = seq(optional(choice(...UNARY_OPS)), "0x", sep1(HEX_DIGITS, "_"));
+const NUMBER_DEC = seq(sep1(DIGITS, "_"));
+const NUMBER_BIN = seq("0b", sep1(BIN_DIGITS, "_"));
+const NUMBER_OCT = seq("0o", sep1(OCT_DIGITS, "_"));
+const NUMBER_HEX = seq("0x", sep1(HEX_DIGITS, "_"));
 
 const INTEGER = choice(NUMBER_DEC, NUMBER_BIN, NUMBER_OCT, NUMBER_HEX);
 
@@ -65,7 +65,8 @@ module.exports = grammar({
 
     _expression: $ => choice(
       $._literal,
-      $.binary_op
+      $.binary_op,
+      $.unary_op
       // TODO: handle the rest
     ),
 
@@ -107,7 +108,13 @@ module.exports = grammar({
       binaryOp($, prec.left, PREC.ADD_OPS, choice(...ADD_OPS)),
       binaryOp($, prec.left, PREC.MULT_OPS, choice(...MULT_OPS)),
       binaryOp($, prec.left, PREC.POWER_OP, "**"),
-    )
+    ),
+
+    unary_op: $ =>
+      choice(
+        unaryOp($, prec, PREC.UNARY_OPS, choice(...UNARY_OPS)),
+      ),
+
   },
 });
 
@@ -122,6 +129,20 @@ function binaryOp($, assoc, precedence, operator, left = null, right = null) {
       field("left", left || $._expression),
       field("operator", operator),
       field("right", right || $._expression)
+    )
+  );
+}
+
+function unaryOp($, assoc, precedence, operator, right = null) {
+  // Expression such as `x + y` falls under the "expression vs local call"
+  // conflict that we already have. By using dynamic precedence we penalize
+  // unary operator, so `x + y` is interpreted as binary operator (unless
+  // _before_unary_op is tokenized and forces unary operator interpretation)
+  return assoc(
+    precedence,
+    seq(
+      field("operator", operator),
+      field("operand", right || $._expression)
     )
   );
 }
