@@ -39,6 +39,10 @@ module.exports = grammar({
       $._expression
     ),
 
+    _terminator: ($) =>
+      // Right precedence, because we want to consume `;` after newlines if present
+      prec.right(choice(seq(repeat(NEWLINE), ";"), repeat1(NEWLINE))),
+
     _definition: $ => choice(
       $.function_definition,
       $.module_definition
@@ -64,11 +68,27 @@ module.exports = grammar({
     ),
 
     _expression: $ => choice(
+      $.expression_block,
       $._literal,
       $.binary_op,
       $.unary_op
       // TODO: handle the rest
     ),
+
+    expression_block: $ =>
+      seq(
+        "(",
+        optional($._terminator),
+        optional(
+          choice(
+            seq(
+              sep1(choice($._expression), $._terminator),
+              optional($._terminator)
+            )
+          )
+        ),
+        ")"
+      ),
 
     _literal: $ => choice(
       $.integer,

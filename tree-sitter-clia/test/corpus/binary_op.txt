@@ -172,3 +172,22 @@ plus minus
   (binary_op
     (integer)
     (integer)))
+
+=====================================
+precedence determined by parentheses
+=====================================
+
+(1 + 2) * (3 - 4)
+
+---
+
+(source_file
+  (binary_op
+    (expression_block
+      (binary_op
+        (integer)
+        (integer)))
+    (expression_block
+      (binary_op
+        (integer)
+        (integer)))))
