@@ -4,7 +4,7 @@
   "description": "Tree-sitter grammar for Clia programming language",
   "main": "bindings/node",
   "scripts": {
-    "test": "tree-sitter generate && tree-sitter test"
+    "test": "tree-sitter generate --no-bindings && tree-sitter test"
   },
   "author": "",
   "license": "ISC"
