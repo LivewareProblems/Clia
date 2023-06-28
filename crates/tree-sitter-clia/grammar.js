@@ -29,7 +29,7 @@ const FLOAT = seq(NUMBER_DEC, ".", NUMBER_DEC, optional(FLOAT_SCIENTIFIC_PART));
 const NEWLINE = /\r?\n/;
 
 module.exports = grammar({
-  name: 'Clia',
+  name: 'clia',
 
   rules: {
     source_file: $ => repeat($._top_level),

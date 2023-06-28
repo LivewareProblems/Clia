@@ -1,0 +1,159 @@
+// Clia Un-Grammar.
+//
+// This grammar specifies the structure of Clia's concrete syntax tree.
+// It does not specify parsing rules (ambiguities, precedence, etc are out of scope).
+// Tokens are processed -- contextual keywords are recognised, compound operators glued.
+//
+// Legend:
+//
+//   //          -- comment
+//   Name =      -- non-terminal definition
+//   'ident'     -- token (terminal)
+//   A B         -- sequence
+//   A | B       -- alternation
+//   A*          -- zero or more repetition
+//   A?          -- zero or one repetition
+//   (A)         -- same as A
+//   label:A     -- suggested name for field of AST node
+
+//*************************//
+// Names, Aliases and Macros //
+//*************************//
+
+Name =
+  'ident'
+
+Alias =
+  AliasSegment ('.' AliasSegment)*
+
+AliasSegment =
+  Name
+
+TokenTree =
+  '(' ')'
+| '{' '}'
+| '[' ']'
+
+//*************************//
+//          Items          //
+//*************************//
+
+SourceFile =
+  'shebang'?
+  Attr*
+  Item*
+
+Item =
+    Expr
+  | Fn
+  | Module
+
+Module =
+  'defmodule' Alias
+  (ItemList)
+
+ItemList =
+  'do' Attr* Item* 'end'
+
+Fn =
+  'def' Name ParamList WhenClause?
+  body: BlockExpr
+
+ParamList =
+  '(' (Param (',' Param)* ','?)? ')'
+
+Param =
+  Attr*
+
+WhenClause =
+  'when' predicates:(WhenPred (',' WhenPred)* ','?)
+
+WhenPred =
+  (Guard (GuardBool Guard)*)?
+
+GuardBool =
+  'and'
+| 'or'
+
+// TODO fill Guards
+Guard =
+  Name ParamList?
+
+Attr =
+  '#' '!'? '[' Meta ']'
+
+Meta =
+  Path ('=' Expr | TokenTree)?
+
+//****************************//
+// Statements and Expressions //
+//****************************//
+Expr =
+  BinOpExpr
+| BoxExpr
+| CallExpr
+| ClosureExpr
+| Literal
+| PathExpr
+| PrefixExpr
+| UnderscoreExpr
+| BlockExpr
+| Binding
+
+Binding =
+  Pat '=' match:Expr
+
+Literal =
+  value:(
+    'int_number' | 'float_number'
+  | 'true' | 'false'
+  )
+
+PathExpr =
+  Path
+
+BinExpr =
+  Attr*
+  lhs:Expr
+  op:(
+    '||' | '&&'
+  | '==' | '!=' | '<=' | '>=' | '<' | '>'
+  | '+' | '*' | '-' | '/' | '%' | '<<' | '>>' | '|' | '&'
+  )
+  rhs:Expr
+
+ParenExpr =
+  '(' Expr ')'
+
+BlockExpr = 
+  ('do' body:ExprList ('with' HandlerList)? 'end')
+
+CallExpr =
+  Name ArgList
+
+PrefixExpr =
+  op:('-' | '+') Expr
+
+HandlerList =
+  MatchArm*
+
+MatchArm =
+  Pat WhenClause? '->' Expr
+
+//************************//
+//        Patterns        //
+//************************//
+
+Pat =
+  WildcardPat
+| LiteralPat
+| IdentPat
+
+WildcardPat =
+  '_' Name?
+
+LiteralPat =
+  '-'? Literal
+
+IdentPat =
+  Name (Pat)?
