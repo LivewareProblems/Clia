@@ -16,10 +16,10 @@ pub fn clia_ts_tree() -> Tree {
     return tree;
 }
 
-/// Returns a Rust grammar.
+/// Returns a Clia grammar.
 pub fn clia_grammar() -> Grammar {
     let src = include_str!("../clia.ungram");
-    dbg!(src.parse()).unwrap()
+    src.parse().unwrap()
 }
 mod tests {
 

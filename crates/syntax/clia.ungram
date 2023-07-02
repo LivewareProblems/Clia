@@ -40,7 +40,6 @@ TokenTree =
 
 SourceFile =
   'shebang'?
-  Attr*
   Item*
 
 Item =
@@ -53,7 +52,7 @@ Module =
   (ItemList)
 
 ItemList =
-  'do' Attr* Item* 'end'
+  'do' Item* 'end'
 
 Fn =
   'def' Name ParamList WhenClause?
@@ -63,7 +62,7 @@ ParamList =
   '(' (Param (',' Param)* ','?)? ')'
 
 Param =
-  Attr*
+  Pat*
 
 WhenClause =
   'when' predicates:(WhenPred (',' WhenPred)* ','?)
@@ -79,24 +78,14 @@ GuardBool =
 Guard =
   Name ParamList?
 
-Attr =
-  '#' '!'? '[' Meta ']'
-
-Meta =
-  Path ('=' Expr | TokenTree)?
-
 //****************************//
 // Statements and Expressions //
 //****************************//
 Expr =
   BinOpExpr
-| BoxExpr
 | CallExpr
-| ClosureExpr
 | Literal
-| PathExpr
 | PrefixExpr
-| UnderscoreExpr
 | BlockExpr
 | Binding
 
@@ -109,11 +98,7 @@ Literal =
   | 'true' | 'false'
   )
 
-PathExpr =
-  Path
-
-BinExpr =
-  Attr*
+BinOpExpr =
   lhs:Expr
   op:(
     '||' | '&&'
@@ -131,6 +116,9 @@ BlockExpr =
 CallExpr =
   Name ArgList
 
+ArgList =
+  '(' args:(Expr (',' Expr)* ','?)? ')'
+
 PrefixExpr =
   op:('-' | '+') Expr
 
@@ -139,6 +127,9 @@ HandlerList =
 
 MatchArm =
   Pat WhenClause? '->' Expr
+
+ExprList =
+  Expr*
 
 //************************//
 //        Patterns        //
