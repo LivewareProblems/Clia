@@ -8,6 +8,7 @@ Use the Github ToC in the top left hand corner to navigate
 - [Noether](https://github.com/noether-lang/noether/tree/master/doc/presentations/StrangeLoop2014)
 - [Nada Amin, research in compiler and type system/metaprogramming](https://namin.seas.harvard.edu/publications?page=1)
 - [Amal Ahmed, safe linking FFI and gradual type researcher](https://www.ccs.neu.edu/home/amal/)
+- [Alexis King, effects in Haskell](https://lexi-lambda.github.io/)
 
 ## Parsing/Lexing
 
@@ -89,6 +90,8 @@ Use the Github ToC in the top left hand corner to navigate
 - [Query-bases compiler architectures](https://www.youtube.com/watch?app%253Ddesktop%2526v%253D3D-ngGIP4fQ)
 - [Salsa](https://salsa-rs.github.io/salsa/about_salsa.html)
 - [Responsive Compilers - Nicholas Matsakis on Salsa](https://www.youtube.com/watch?app%253Ddesktop%2526v%253DN6b44kMS6OM)
+- [Effekt compiler](https://effekt-lang.org/docs/implementation)
+- [LLVM reference](https://llvm.org/docs/Reference.html)
 
 ## Build system
 
@@ -112,6 +115,7 @@ Note: if we integrate llbuild deeply, we may have to merge build system and comp
 - [Ideal Package Manager](https://hmac.dev/posts/2022-06-08-the-ideal-package-manager.html)
 - [Scripts with dependencies rosetta](https://dbohdan.com/scripts-with-dependencies)
 - [Taxonomy of Package Management](https://plos-workshop.org/2019/preprint/plos19-muhammad.pdf)
+- [The Update Framework](https://theupdateframework.github.io/specification/latest/)
 
 ## Type System
 
@@ -130,6 +134,16 @@ Note: if we integrate llbuild deeply, we may have to merge build system and comp
 - [Type System for Fearless concurrency](https://dl.acm.org/doi/pdf/10.1145/3519939.3523443)
 - [Niki Vazou, refinement types and liquid types researcher](https://namin.seas.harvard.edu/publications?page=1)
 - [Why the Sorbet typechecker is fast](https://blog.nelhage.com/post/why-sorbet-is-fast/)
+- [Swift removal of arg name in function types](https://github.com/apple/swift-evolution/blob/main/proposals/0111-remove-arg-label-type-significance.md)
+- [CounterExamples in type systems](https://counterexamples.org/glossary.html)
+
+## Memory Handling
+
+- [Ref Counting with Frame Limited Reuse, Perceus](https://www.microsoft.com/en-us/research/publication/reference-counting-with-frame-limited-reuse-extended-version/)
+- [Fully in place Functional Programming](https://www.microsoft.com/en-us/research/uploads/prod/2023/05/fbip.pdf)
+- [Koka's FBIP](https://koka-lang.github.io/koka/doc/book.html#sec-fbip)
+- [Perceus OG extended version](https://www.microsoft.com/en-us/research/publication/perceus-garbage-free-reference-counting-with-reuse/)
+- [Basil on stack memory management](https://degaz.io/blog/632020/post.html)
 
 ## CLI handling
 
@@ -173,6 +187,10 @@ Note: if we integrate llbuild deeply, we may have to merge build system and comp
 - [PLT Redex, debugging operational semantics](https://redex.racket-lang.org/index.html)
 - [K, an environemnt to define languages](https://kframework.org/)
 - [Defaults Affect Inference](https://faultlore.com/blah/defaults-affect-inference/)
+- [Rust let else](https://github.com/rust-lang/rfcs/blob/master/text/3137-let-else.md)
+- [Rust if let](https://github.com/rust-lang/rfcs/blob/master/text/0160-if-let.md)
+- [Polymorphic identifiers: uniform resource access in objective-smalltalk](https://dl.acm.org/doi/10.1145/2508168.2508169?cid%253D81316491227)
+- [Ocaml named arg](https://v2.ocaml.org/manual/lablexamples.html)
 
 ## Polymorphism and modules
 
@@ -288,6 +306,11 @@ Note: if we integrate llbuild deeply, we may have to merge build system and comp
 - [One Hundred Thousands Lines of Rust](https://matklad.github.io/2021/09/05/Rust100k.html)
 - [How to handle filename in shell](https://dwheeler.com/essays/filenames-in-shell.html)
 - [Fixing Unix/linus filename](https://dwheeler.com/essays/fixing-unix-linux-filenames.html)
+- [Julia shelling out pipeline tricks](https://julialang.org/blog/2013/04/put-this-in-your-pipe/)
+- [Julia running external programs doc](https://docs.julialang.org/en/v1/manual/running-external-programs/)
+- [Julia's filesystem stdlib doc](https://docs.julialang.org/en/v1/base/file/)
+- [Shelling out Sucks](https://julialang.org/blog/2012/03/shelling-out-sucks/)
+- [Propagating bounds through bitwise operations](http://bitmath.blogspot.com/2023/07/propagating-bounds-through-bitwise.html?m%253D1)
 
 ## Tooling
 
@@ -306,6 +329,7 @@ Note: if we integrate llbuild deeply, we may have to merge build system and comp
 - [Find Usages](https://rust-analyzer.github.io/blog/2019/11/13/find-usages.html)
 - [Why LSP](https://matklad.github.io/2022/04/25/why-lsp.html)
 - [How to Make a 💡?](https://rust-analyzer.github.io/blog/2020/09/28/how-to-make-a-light-bulb.html)
+- [Speeding up vsCode extensions in 2022](https://jason-williams.co.uk/posts/speeding-up-vscode-extensions-in-2022/)
 
 ## Capabilities/effects
 
