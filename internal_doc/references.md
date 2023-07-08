@@ -144,6 +144,7 @@ Note: if we integrate llbuild deeply, we may have to merge build system and comp
 - [Koka's FBIP](https://koka-lang.github.io/koka/doc/book.html#sec-fbip)
 - [Perceus OG extended version](https://www.microsoft.com/en-us/research/publication/perceus-garbage-free-reference-counting-with-reuse/)
 - [Basil on stack memory management](https://degaz.io/blog/632020/post.html)
+- [Region-based Resource Management in Continuation-Passing Style](https://se.cs.uni-tuebingen.de/publications/schuster22region.pdf)
 
 ## CLI handling
 
@@ -357,3 +358,5 @@ Note: if we integrate llbuild deeply, we may have to merge build system and comp
 - [Effekt with first class function](https://github.com/se-tuebingen/oopsla-2022-artifact/blob/main/oopsla22-paper53.pdf)
 - [The problems of effects in Rust](https://without.boats/blog/the-problem-of-effects/)
 - [Effekt](https://effekt-lang.org/docs/implementation)
+- [Compiling Effect Handlers in Capability-Passing Style](https://dl.acm.org/doi/pdf/10.1145/3408975)
+- [Typed Continuation-Passing for Lexical Handlers](https://se.cs.uni-tuebingen.de/publications/schuster22typed.pdf)
