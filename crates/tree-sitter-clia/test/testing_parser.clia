@@ -1,0 +1,5 @@
+defmodule Test do
+  def foo() do
+    (1 + 2) * (3 - 4)
+  end
+end

@@ -1,41 +1,24 @@
-use tree_sitter::{self, Tree};
-use ungrammar::Grammar;
+#[cfg(test)]
+mod tests;
 
-pub fn clia_ts_tree() -> Tree {
-    let code = r#"defmodule Test do
-    def foo() do
-      1 + 2
-    end
-  end
-  "#;
+mod syntax_kind;
+mod parser;
+
+use parser::{parse, Parse};
+use syntax_kind::CliaLang;
+use tree_sitter::{self, Parser};
+
+pub type SyntaxNode = rowan::SyntaxNode<CliaLang>;
+pub type SyntaxToken = rowan::SyntaxToken<CliaLang>;
+pub type SyntaxElement = rowan::SyntaxElement<CliaLang>;
+pub type SyntaxKind = syntax_kind::SyntaxKind;
+
+pub fn clia_ts_parser() -> Parser {
     let mut parser = tree_sitter::Parser::new();
-    parser
-        .set_language(tree_sitter_clia::language())
-        .expect("Error loading Clia grammar");
-    let tree = parser.parse(code, None).unwrap();
-    return tree;
+    parser.set_language(tree_sitter_clia::language()).expect("Error loading Clia grammar");
+    return parser;
 }
 
-/// Returns a Clia grammar.
-pub fn clia_grammar() -> Grammar {
-    let src = include_str!("../clia.ungram");
-    src.parse().unwrap()
-}
-mod tests {
-
-    #[test]
-    fn test_what_cst() {
-        let tree = crate::clia_ts_tree();
-        let cursor = tree.walk();
-
-        for node in tree_sitter_traversal::traverse(cursor, tree_sitter_traversal::Order::Pre) {
-            println!("{:?}", node);
-        }
-    }
-
-    #[test]
-    fn test_ungram_smoke() {
-        let grammar = crate::clia_grammar();
-        drop(grammar)
-    }
+pub fn clia_to_cst(input: &str) -> Parse {
+    parse(input)
 }

@@ -8,9 +8,11 @@ edition = "2021"
 [dependencies]
 tree-sitter = "~0.20.10"
 tree-sitter-traversal = "0.1.2"
-ungrammar = "1.16.1"
+rowan = "0.15.11"
 
 tree-sitter-clia = { workspace = true }
 
 [dev-dependencies]
 
+quote = "1.0.29"
+expect-test = "1.4.1"
