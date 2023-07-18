@@ -2,24 +2,25 @@
 #[allow(non_camel_case_types)]
 #[repr(u16)]
 pub enum SyntaxKind {
-    BINARY_OP, // '+'
-    ERROR,
-    INT_NUMBER,
+    BinaryOp, // '+'
+    Error,
+    Integer,
+    Literal,
     // composite nodes
     // Tokens
-    PLUS,
-    MINUS,
-    SOURCE, // top-level node: a list of s-expressions
+    Plus,
+    Minus,
+    Source, // top-level node: a list of s-expressions
 }
 use SyntaxKind::*;
 
 impl SyntaxKind {
     pub fn is_punct(self) -> bool {
-        matches!(self, PLUS | MINUS)
+        matches!(self, Plus | Minus)
     }
 
     pub fn is_literal(self) -> bool {
-        matches!(self, INT_NUMBER)
+        matches!(self, Integer)
     }
 
     pub fn is_token(self) -> bool {
@@ -28,8 +29,8 @@ impl SyntaxKind {
 
     pub fn from_char(c: char) -> Option<SyntaxKind> {
         let tok = match c {
-            '+' => PLUS,
-            '-' => MINUS,
+            '+' => Plus,
+            '-' => Minus,
             _ => return None,
         };
         Some(tok)
@@ -37,10 +38,10 @@ impl SyntaxKind {
 
     pub fn from_ts_kind(ts_kind: &str) -> Option<SyntaxKind> {
         match ts_kind {
-            "source_file" => Some(SOURCE),
-            "binary_op" => Some(BINARY_OP),
-            "integer" => Some(INT_NUMBER),
-            "+" => Some(PLUS),
+            "source_file" => Some(Source),
+            "binary_op" => Some(BinaryOp),
+            "integer" => Some(Integer),
+            "+" => Some(Plus),
             _ => todo!(),
         }
     }
@@ -64,7 +65,7 @@ pub enum CliaLang {}
 impl rowan::Language for CliaLang {
     type Kind = SyntaxKind;
     fn kind_from_raw(raw: rowan::SyntaxKind) -> Self::Kind {
-        assert!(raw.0 <= SOURCE as u16);
+        assert!(raw.0 <= Source as u16);
         unsafe { std::mem::transmute::<u16, SyntaxKind>(raw.0) }
     }
     fn kind_to_raw(kind: Self::Kind) -> rowan::SyntaxKind {

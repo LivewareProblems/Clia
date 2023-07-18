@@ -5,28 +5,28 @@ pub struct Root(SyntaxNode);
 
 impl Root {
     pub fn cast(node: SyntaxNode) -> Option<Self> {
-        if node.kind() == SyntaxKind::SOURCE {
+        if node.kind() == SyntaxKind::Source {
             Some(Self(node))
         } else {
             None
         }
     }
 
-    pub fn exprs(&self) -> impl Iterator<Item = Expr> {
-        self.0.children().filter_map(Expr::cast)
+    pub fn exprs(&self) -> impl Iterator<Item = Option<Expr>> {
+        self.0.children().map(Expr::cast)
     }
 }
 
 #[derive(Debug)]
 pub enum Expr {
     BinaryExpr(BinaryExpr),
-    Integer(Integer),
+    Literal(Literal),
 }
 impl Expr {
     pub fn cast(node: SyntaxNode) -> Option<Self> {
         let result = match node.kind() {
-            SyntaxKind::BINARY_OP => Self::BinaryExpr(BinaryExpr(node)),
-            SyntaxKind::INT_NUMBER => Self::Integer(Integer(node)),
+            SyntaxKind::BinaryOp => Self::BinaryExpr(BinaryExpr(node)),
+            SyntaxKind::Literal => Self::Literal(Literal(node)),
             _ => return None,
         };
 
@@ -34,9 +34,9 @@ impl Expr {
     }
 }
 #[derive(Debug)]
-pub struct Integer(SyntaxNode);
+pub struct Literal(SyntaxNode);
 
-impl Integer {
+impl Literal {
     pub fn parse(&self) -> u64 {
         self.0.first_token().unwrap().text().parse().unwrap()
     }
@@ -57,7 +57,7 @@ impl BinaryExpr {
         self.0
             .children_with_tokens()
             .filter_map(SyntaxElement::into_token)
-            .find(|token| matches!(token.kind(), SyntaxKind::PLUS,))
+            .find(|token| matches!(token.kind(), SyntaxKind::Plus,))
     }
 }
 

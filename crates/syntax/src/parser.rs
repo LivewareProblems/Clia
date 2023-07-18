@@ -55,8 +55,8 @@ impl<'a> Parser<'a> {
     }
 
     pub(crate) fn parse(mut self) -> Parse {
-        if SyntaxKind::from_ts_kind(self.ts_tree.root_node().kind()) == Some(SOURCE) {
-            self.start_node(SOURCE);
+        if SyntaxKind::from_ts_kind(self.ts_tree.root_node().kind()) == Some(Source) {
+            self.start_node(Source);
             let tree_cl = self.ts_tree.clone();
             let mut cursor = tree_cl.walk();
             cursor.goto_first_child();
@@ -71,9 +71,15 @@ impl<'a> Parser<'a> {
     fn traverse_and_parse(&mut self, cursor: &mut TreeCursor) -> () {
         'outer: loop {
             let node = cursor.node();
-            let kind = SyntaxKind::from_ts_kind(node.kind()).unwrap_or(ERROR);
+            let kind = SyntaxKind::from_ts_kind(node.kind()).unwrap_or(Error);
             if kind.is_token() {
-                self.token_from_kind(kind, node);
+                if kind.is_literal() {
+                    self.start_node(Literal);
+                    self.token_from_kind(kind, node);
+                    self.finish_node();
+                } else {
+                    self.token_from_kind(kind, node);
+                }
                 'inner: loop {
                     if !cursor.goto_next_sibling() {
                         if !cursor.goto_parent() {

@@ -11,7 +11,7 @@ mod tests {
 
     #[test]
     fn parse_nothing() {
-        check("", expect![[r#"SOURCE@0..0"#]]);
+        check("", expect![[r#"Source@0..0"#]]);
     }
 
     #[test]
@@ -19,8 +19,9 @@ mod tests {
         check(
             "123",
             expect![[r#"
-SOURCE@0..3
-  INT_NUMBER@0..3 "123""#]],
+                Source@0..3
+                  Literal@0..3
+                    Integer@0..3 "123""#]],
         );
     }
 
@@ -29,11 +30,13 @@ SOURCE@0..3
         check(
             "1 + 2",
             expect![[r#"
-SOURCE@0..3
-  BINARY_OP@0..3
-    INT_NUMBER@0..1 "1"
-    PLUS@1..2 "+"
-    INT_NUMBER@2..3 "2""#]],
+                Source@0..3
+                  BinaryOp@0..3
+                    Literal@0..1
+                      Integer@0..1 "1"
+                    Plus@1..2 "+"
+                    Literal@2..3
+                      Integer@2..3 "2""#]],
         );
     }
 

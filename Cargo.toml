@@ -13,3 +13,4 @@ license = "Apache-2.0"
 tree-sitter-clia = { path = "./crates/tree-sitter-clia", version = "0.0.0" }
 syntax = { path = "./crates/syntax", version = "0.0.0"}
 ast = { path = "./crates/ast", version = "0.0.0"}
+hir = { path = "./crates/hir", version = "0.0.0"}
