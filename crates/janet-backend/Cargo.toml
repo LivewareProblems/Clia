@@ -1,0 +1,10 @@
+[package]
+name = "janet-backend"
+version = "0.0.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# TODO use a stable version again. This is here to handle the janet update
+janetrs = {git = "https://github.com/GrayJack/janetrs.git",rev = "0ac83d14a60b38a6da32c774bb2213f1c553b879", feature-default = false, features = ["std", "unicode", "amalgation"]}

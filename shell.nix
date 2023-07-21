@@ -7,7 +7,9 @@ in with pkgs;
 let node = nodejs_20;
 
 in pkgs.mkShell {
+  nativeBuildInputs = [ rustPlatform.bindgenHook ];
   packages = [
+    pkgs.llvmPackages.libclang
     toolchain
     node
     pkgs.tree-sitter
@@ -17,5 +19,5 @@ in pkgs.mkShell {
 
   LANG = "en_US.UTF-8";
   RUST_SRC_PATH = "${toolchain}/lib/rustlib/src/rust/library";
-
+  LIBCLANG_PATH = "${pkgs.llvmPackages.libclang.lib}/lib";
 }
