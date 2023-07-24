@@ -7,4 +7,11 @@ edition = "2021"
 
 [dependencies]
 # TODO use a stable version again. This is here to handle the janet update
-janetrs = {git = "https://github.com/GrayJack/janetrs.git",rev = "0ac83d14a60b38a6da32c774bb2213f1c553b879", feature-default = false, features = ["std", "unicode", "amalgation"]}
+janetrs = { git = "https://github.com/GrayJack/janetrs.git", rev = "0ac83d14a60b38a6da32c774bb2213f1c553b879", feature-default = false, features = [
+  "std",
+  "unicode",
+  "amalgation",
+] }
+ast = { workspace = true }
+hir = { workspace = true }
+syntax = { workspace = true }
