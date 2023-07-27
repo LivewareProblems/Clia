@@ -9,6 +9,7 @@ Use the Github ToC in the top left hand corner to navigate
 - [Nada Amin, research in compiler and type system/metaprogramming](https://namin.seas.harvard.edu/publications?page=1)
 - [Amal Ahmed, safe linking FFI and gradual type researcher](https://www.ccs.neu.edu/home/amal/)
 - [Alexis King, effects in Haskell](https://lexi-lambda.github.io/)
+- [Defense of Design](https://buttondown.email/hillelwayne/archive/more-software-projects-need-defenses-of-design/)
 
 ## Parsing/Lexing
 
@@ -30,6 +31,7 @@ Use the Github ToC in the top left hand corner to navigate
 - [tree-sitter-elixir](https://github.com/elixir-lang/tree-sitter-elixir/)
 - [Tree-sitter](http://tree-sitter.github.io/tree-sitter/)
 - [Pratt Parsers](http://journal.stuffwithstuff.com/2011/03/19/pratt-parsers-expression-parsing-made-easy/)
+- [Nom error recovery](https://eyalkalderon.com/blog/nom-error-recovery/)
 
 ## Compiler arch
 
@@ -92,6 +94,7 @@ Use the Github ToC in the top left hand corner to navigate
 - [Responsive Compilers - Nicholas Matsakis on Salsa](https://www.youtube.com/watch?app%253Ddesktop%2526v%253DN6b44kMS6OM)
 - [Effekt compiler](https://effekt-lang.org/docs/implementation)
 - [LLVM reference](https://llvm.org/docs/Reference.html)
+- [Tutorial end to end programming language with llvm](https://mukulrathi.com/create-your-own-programming-language/llvm-ir-cpp-api-tutorial/)
 
 ## Build system
 
@@ -136,6 +139,8 @@ Note: if we integrate llbuild deeply, we may have to merge build system and comp
 - [Why the Sorbet typechecker is fast](https://blog.nelhage.com/post/why-sorbet-is-fast/)
 - [Swift removal of arg name in function types](https://github.com/apple/swift-evolution/blob/main/proposals/0111-remove-arg-label-type-significance.md)
 - [CounterExamples in type systems](https://counterexamples.org/glossary.html)
+- [Type inference for beginners tutorial](https://medium.com/%2540dhruvrajvanshi/type-inference-for-beginners-part-1-3e0a5be98a4b)
+- [HM in Rust](https://reasoning.page/blog/hindley-milner-rust)
 
 ## Memory Handling
 
@@ -192,6 +197,7 @@ Note: if we integrate llbuild deeply, we may have to merge build system and comp
 - [Rust if let](https://github.com/rust-lang/rfcs/blob/master/text/0160-if-let.md)
 - [Polymorphic identifiers: uniform resource access in objective-smalltalk](https://dl.acm.org/doi/10.1145/2508168.2508169?cid%253D81316491227)
 - [Ocaml named arg](https://v2.ocaml.org/manual/lablexamples.html)
+- [Discussion on lobsters one good general purpose language](https://lobste.rs/s/tx4s9v/opinion_on_what_s_good_general_purpose#c_yhwbu3)
 
 ## Polymorphism and modules
 
@@ -331,6 +337,9 @@ Note: if we integrate llbuild deeply, we may have to merge build system and comp
 - [Why LSP](https://matklad.github.io/2022/04/25/why-lsp.html)
 - [How to Make a 💡?](https://rust-analyzer.github.io/blog/2020/09/28/how-to-make-a-light-bulb.html)
 - [Speeding up vsCode extensions in 2022](https://jason-williams.co.uk/posts/speeding-up-vscode-extensions-in-2022/)
+- [Resugaring type rules](https://blog.brownplt.org/2018/06/19/resugaring-type-rules.html)
+- [Resugaring scope rules](https://blog.brownplt.org/2017/06/12/scope-inference.html)
+- [Resugaring Evaluation Sequences](https://blog.brownplt.org/2016/02/06/resugaring.html)
 
 ## Capabilities/effects
 
