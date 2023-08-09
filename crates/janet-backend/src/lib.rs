@@ -4,7 +4,7 @@ use ast;
 use hir::{BinaryOp, Expr};
 use janetrs::client::{Error, JanetClient};
 
-fn run_janet_code(text: &str) -> Result<(), Error> {
+pub fn run_janet_code(text: &str) -> Result<(), Error> {
     let client = JanetClient::init_with_default_env()?;
 
     let out = client.run(text)?;
@@ -14,7 +14,7 @@ fn run_janet_code(text: &str) -> Result<(), Error> {
     Ok(())
 }
 
-fn ast_to_janet(ast: ast::Root) -> String {
+pub fn ast_to_janet(ast: ast::Root) -> String {
     let hir_root = hir::lower(ast);
     hir_root.map(|x| hir_expr_to_janet(x)).reduce(|x, y| x + &y).unwrap()
 }
