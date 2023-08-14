@@ -1,0 +1,61 @@
+=====================================
+empty
+=====================================
+
+#
+
+---
+
+(source_file
+  (comment))
+
+=====================================
+single line
+=====================================
+
+# single comment
+
+---
+
+(source_file
+  (comment))
+
+=====================================
+multiple start symbols
+=====================================
+
+### multiple "#"
+
+---
+
+(source_file
+  (comment))
+
+=====================================
+many consecutive lines
+=====================================
+
+# many
+# consecutive
+1
+# lines
+
+---
+
+(source_file
+  (comment)
+  (comment)
+  (integer)
+  (comment))
+
+=====================================
+in the same line as regular code
+=====================================
+
+1 # comment
+
+---
+
+(source_file
+  (integer)
+  (comment))

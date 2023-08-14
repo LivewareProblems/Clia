@@ -372,6 +372,10 @@
     "named": true
   },
   {
+    "type": "comment",
+    "named": true
+  },
+  {
     "type": "def",
     "named": false
   },

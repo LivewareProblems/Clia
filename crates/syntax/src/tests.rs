@@ -40,6 +40,39 @@ mod tests {
         );
     }
 
+    #[test]
+    fn parse_comment() {
+        check(
+            "# hello!",
+            expect![[r##"
+              Source@0..8
+                Comment@0..8 "# hello!""##]],
+        );
+    }
+
+    #[test]
+    fn parse_binary_expression_interspersed_with_comments() {
+        check(
+            "
+              1
+                + 1 # Add one
+                + 10 # Add ten",
+            expect![[r##"
+            Source@0..24
+              BinaryOp@0..15
+                BinaryOp@0..3
+                  Literal@0..1
+                    Integer@0..1 "1"
+                  Plus@1..2 "+"
+                  Literal@2..3
+                    Integer@2..3 "1"
+                Comment@3..12 "# Add one"
+                Plus@12..13 "+"
+                Literal@13..15
+                  Integer@13..15 "10"
+              Comment@15..24 "# Add ten""##]],
+        );
+    }
     // #[test]
     // fn test_what_cst() {
     //     let test_text = r#"

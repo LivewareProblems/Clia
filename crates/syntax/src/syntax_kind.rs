@@ -6,6 +6,7 @@ pub enum SyntaxKind {
     Error,
     Integer,
     Literal,
+    Comment,
     // composite nodes
     // Tokens
     Plus,
@@ -22,9 +23,12 @@ impl SyntaxKind {
     pub fn is_literal(self) -> bool {
         matches!(self, Integer)
     }
+    pub fn is_trivia(self) -> bool {
+        matches!(self, Comment)
+    }
 
     pub fn is_token(self) -> bool {
-        self.is_literal() || self.is_punct()
+        self.is_literal() || self.is_punct() || self.is_trivia()
     }
 
     pub fn from_char(c: char) -> Option<SyntaxKind> {
@@ -41,6 +45,7 @@ impl SyntaxKind {
             "source_file" => Some(Source),
             "binary_op" => Some(BinaryOp),
             "integer" => Some(Integer),
+            "comment" => Some(Comment),
             "+" => Some(Plus),
             _ => todo!(),
         }

@@ -31,6 +31,11 @@ const NEWLINE = /\r?\n/;
 module.exports = grammar({
   name: 'clia',
 
+  extras: ($) => [
+    NEWLINE,
+    /[ \t]|\r?\n|\\\r?\n/,
+    $.comment,],
+
   rules: {
     source_file: $ => repeat($._top_level),
 
@@ -135,6 +140,7 @@ module.exports = grammar({
         unaryOp($, prec, PREC.UNARY_OPS, choice(...UNARY_OPS)),
       ),
 
+    comment: ($) => token(prec(-1, seq("#", /.*/))),
   },
 });
 

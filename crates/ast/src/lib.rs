@@ -76,4 +76,15 @@ mod tests {
 
         dbg!(root.exprs().collect::<Vec<_>>());
     }
+
+    #[test]
+    fn it_works_with_comments() {
+        let input = "1 + 2 # a comment";
+        let parse = clia_to_cst(&input);
+        println!("{}", parse.debug_tree());
+
+        let root = Root::cast(parse.syntax()).unwrap();
+
+        dbg!(root.exprs().collect::<Vec<_>>());
+    }
 }
