@@ -10,6 +10,10 @@ Use the Github ToC in the top left hand corner to navigate
 - [Amal Ahmed, safe linking FFI and gradual type researcher](https://www.ccs.neu.edu/home/amal/)
 - [Alexis King, effects in Haskell](https://lexi-lambda.github.io/)
 - [Defense of Design](https://buttondown.email/hillelwayne/archive/more-software-projects-need-defenses-of-design/)
+- [4 kinds of optimisation](https://tratt.net/laurie/blog/2023/four_kinds_of_optimisation.html)
+- [Concurrency Among Strangers Programming in E as Plan Coordination](http://www.erights.org/talks/promises/paper/tgc05.pdf)
+- [A Taxonomy of Security Issues for understanding language-based security and modularity](https://docs.google.com/document/u/0/d/1cHSXziWOZ_44oSdyaKkJ-X0hTF_OhunIjgnrJ8oycss)
+- [Julia: A Fast Dynamic Language for Technical Computing](https://arxiv.org/abs/1209.5145)
 
 ## Parsing/Lexing
 
@@ -32,6 +36,7 @@ Use the Github ToC in the top left hand corner to navigate
 - [Tree-sitter](http://tree-sitter.github.io/tree-sitter/)
 - [Pratt Parsers](http://journal.stuffwithstuff.com/2011/03/19/pratt-parsers-expression-parsing-made-easy/)
 - [Nom error recovery](https://eyalkalderon.com/blog/nom-error-recovery/)
+- [Scanner-Driven Parser Development](https://depth-first.com/articles/2019/01/22/scanner-driven-parser-development/)
 
 ## Compiler arch
 
@@ -95,6 +100,16 @@ Use the Github ToC in the top left hand corner to navigate
 - [Effekt compiler](https://effekt-lang.org/docs/implementation)
 - [LLVM reference](https://llvm.org/docs/Reference.html)
 - [Tutorial end to end programming language with llvm](https://mukulrathi.com/create-your-own-programming-language/llvm-ir-cpp-api-tutorial/)
+- [MLIR For Beginners](https://github.com/j2kun/mlir-tutorial)
+- [AST vs. Bytecode: Interpreters in the Age of Meta-Compilation](https://stefan-marr.de/downloads/oopsla23-larose-et-al-ast-vs-bytecode-interpreters-in-the-age-of-meta-compilation.pdf)
+- [FileCheck for testing](https://llvm.org/docs/CommandGuide/FileCheck.html)
+- [A Gentle Introduction to LLVM IR](https://mcyoung.xyz/2023/08/01/llvm-ir/)
+- [Modernizing Compiler Design for Carbon Toolchain - Chandler Carruth - CppNow 2023](https://www.youtube.com/watch?app%253Ddesktop%2526v%253DZI198eFghJk)
+- [Vectorized Interpreters MRT for PL](http://venge.net/graydon/talks/VectorizedInterpretersTalk-2023-05-12.pdf)
+- [From Capabilities to Regions: Enabling Efficient Compilation of Lexical Effect Handlers](https://dl.acm.org/doi/10.1145/3622831)
+- [Boba Devlog #2: Compiling Arrays](https://veera.app/array.html)
+- [What If We Don’t Pop the Stack? The Return of 2nd-Class Values](https://www.cs.purdue.edu/homes/rompf/papers/xhebraj-ecoop22.pdf)
+- [A quick look at destination-driven code generation](https://bernsteinbear.com/blog/ddcg/)
 
 ## Build system
 
@@ -119,6 +134,7 @@ Note: if we integrate llbuild deeply, we may have to merge build system and comp
 - [Scripts with dependencies rosetta](https://dbohdan.com/scripts-with-dependencies)
 - [Taxonomy of Package Management](https://plos-workshop.org/2019/preprint/plos19-muhammad.pdf)
 - [The Update Framework](https://theupdateframework.github.io/specification/latest/)
+- [So you want to write a package manager](https://medium.com/%2540sdboyer/so-you-want-to-write-a-package-manager-4ae9c17d9527)
 
 ## Type System
 
@@ -141,6 +157,13 @@ Note: if we integrate llbuild deeply, we may have to merge build system and comp
 - [CounterExamples in type systems](https://counterexamples.org/glossary.html)
 - [Type inference for beginners tutorial](https://medium.com/%2540dhruvrajvanshi/type-inference-for-beginners-part-1-3e0a5be98a4b)
 - [HM in Rust](https://reasoning.page/blog/hindley-milner-rust)
+- [Second-Class references](https://borretti.me/article/second-class-references)
+- [Why Static Languages Suffer From Complexity](https://hirrolot.github.io/posts/why-static-languages-suffer-from-complexity.html)
+- [Gradual Soundness: Lessons from Static Python](https://arxiv.org/abs/2206.13831)
+- [YDKTS: Fixing TypeScript's type-safety with Nominal types](https://www.10xtech.io/blogs/nominal-types)
+- [Type Systems as Macros](https://www.khoury.northeastern.edu/home/stchang/pubs/ckg-popl2017.pdf)
+- [Variadic generics, again](https://poignardazur.github.io/2023/11/08/time-for-variadic-generics/)
+- [A better explanation of the Liskov Substitution Principle](https://www.hillelwayne.com/post/lsp/)
 
 ## Memory Handling
 
@@ -150,6 +173,8 @@ Note: if we integrate llbuild deeply, we may have to merge build system and comp
 - [Perceus OG extended version](https://www.microsoft.com/en-us/research/publication/perceus-garbage-free-reference-counting-with-reuse/)
 - [Basil on stack memory management](https://degaz.io/blog/632020/post.html)
 - [Region-based Resource Management in Continuation-Passing Style](https://se.cs.uni-tuebingen.de/publications/schuster22region.pdf)
+- [Bit-Stealing Made Legal: Compilation for Custom Memory Representations of Algebraic Data Types](https://dl.acm.org/doi/10.1145/3607858)
+- [Destructing trees safely and cheaply](https://ismailmaj.github.io/destructing-trees-safely-and-cheaply)
 
 ## CLI handling
 
@@ -198,6 +223,8 @@ Note: if we integrate llbuild deeply, we may have to merge build system and comp
 - [Polymorphic identifiers: uniform resource access in objective-smalltalk](https://dl.acm.org/doi/10.1145/2508168.2508169?cid%253D81316491227)
 - [Ocaml named arg](https://v2.ocaml.org/manual/lablexamples.html)
 - [Discussion on lobsters one good general purpose language](https://lobste.rs/s/tx4s9v/opinion_on_what_s_good_general_purpose#c_yhwbu3)
+- [Great Nickel configurations from little merges grow](https://www.tweag.io/blog/2023-11-02-nickel-merge-system/)
+- [Pattern matching alg impl in Rust](https://github.com/yorickpeterse/pattern-matching-in-rust)
 
 ## Polymorphism and modules
 
@@ -237,6 +264,14 @@ Note: if we integrate llbuild deeply, we may have to merge build system and comp
 - [lobster comment from Matklad on module systems](https://lobste.rs/s/u7y4lk/modules_matter_most_for_masses#c_i6a8n9)
 - [Modular Implicits](https://arxiv.org/abs/1512.01895)
 - [Matklad on modules in Rust](https://lobste.rs/s/vx8hbs/rust_module_system_encourages_poor#c_ajrll5)
+- [The Difficulty of Improving Upon the Standard ML Module System](http://macqueenfest.cs.uchicago.edu/slides/dreyer.pdf)
+- [What's in module, good overview](https://thunderseethe.dev/posts/whats-in-a-module/)
+- [Garnet discussion with matklad on modules](https://todo.sr.ht/~icefox/garnet/52#event-242650)
+- ['Modules Matter Most' for the Masses](https://www.pathsensitive.com/2023/03/modules-matter-most-for-masses.html)
+- [Modules Matter Most](https://existentialtype.wordpress.com/2011/04/16/modules-matter-most/)
+- [Understanding and Evolving the ML Module System](https://people.mpi-sws.org/~dreyer/thesis/main.pdf)
+- [Polymorphisation: Improving Rust compilation times through intelligent monomorphisation](https://davidtw.co/media/masters_dissertation.pdf)
+- [MixML](https://people.mpi-sws.org/~rossberg/mixml/)
 
 ## stdlib
 
@@ -318,6 +353,12 @@ Note: if we integrate llbuild deeply, we may have to merge build system and comp
 - [Julia's filesystem stdlib doc](https://docs.julialang.org/en/v1/base/file/)
 - [Shelling out Sucks](https://julialang.org/blog/2012/03/shelling-out-sucks/)
 - [Propagating bounds through bitwise operations](http://bitmath.blogspot.com/2023/07/propagating-bounds-through-bitwise.html?m%253D1)
+- [The shell and its crappy handling of whitespace](https://blog.plover.com/Unix/whitespace.html)
+- [Reconciling elegance and secure-by-design in APIs](https://sethmlarson.dev/elegant-and-secure-api-design)
+- [Rhombus: A New Spin on Macros Without All the Parentheses](https://gopiandcode.uk/pdfs/rhombus-oopsla23.pdf)
+- [Raku is surprisingly good for CLIs](https://buttondown.email/hillelwayne/archive/raku-is-surprisingly-good-for-clis/)
+- [Preserving comments when parsing and formatting code](https://jayconrod.com/posts/129/preserving-comments-when-parsing-and-formatting-code)
+- [Egison's Pattern-matching via Logic Programming](http://blog.vmchale.com/article/curry-egison)
 
 ## Tooling
 
@@ -340,6 +381,8 @@ Note: if we integrate llbuild deeply, we may have to merge build system and comp
 - [Resugaring type rules](https://blog.brownplt.org/2018/06/19/resugaring-type-rules.html)
 - [Resugaring scope rules](https://blog.brownplt.org/2017/06/12/scope-inference.html)
 - [Resugaring Evaluation Sequences](https://blog.brownplt.org/2016/02/06/resugaring.html)
+- [LetsBeRealAboutDependencies](https://wiki.alopex.li/LetsBeRealAboutDependencies)
+- [Checking semver in the presence of doc(hidden) items](https://predr.ag/blog/checking-semver-for-doc-hidden-items/)
 
 ## Capabilities/effects
 
