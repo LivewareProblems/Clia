@@ -14,6 +14,7 @@ Use the Github ToC in the top left hand corner to navigate
 - [Concurrency Among Strangers Programming in E as Plan Coordination](http://www.erights.org/talks/promises/paper/tgc05.pdf)
 - [A Taxonomy of Security Issues for understanding language-based security and modularity](https://docs.google.com/document/u/0/d/1cHSXziWOZ_44oSdyaKkJ-X0hTF_OhunIjgnrJ8oycss)
 - [Julia: A Fast Dynamic Language for Technical Computing](https://arxiv.org/abs/1209.5145)
+- [Caffeine cache design](https://github.com/ben-manes/caffeine/wiki/Design)
 
 ## Parsing/Lexing
 
@@ -110,6 +111,8 @@ Use the Github ToC in the top left hand corner to navigate
 - [Boba Devlog #2: Compiling Arrays](https://veera.app/array.html)
 - [What If We Don’t Pop the Stack? The Return of 2nd-Class Values](https://www.cs.purdue.edu/homes/rompf/papers/xhebraj-ecoop22.pdf)
 - [A quick look at destination-driven code generation](https://bernsteinbear.com/blog/ddcg/)
+- [Simplifying Expressions Bottom-Up](https://buttondown.email/jaffray/archive/simplifying-expressions-bottom-up/)
+- [Tools for Learning LLVM TableGen](https://blog.llvm.org/posts/2023-12-07-tools-for-learning-llvm-tablegen/)
 
 ## Build system
 
@@ -225,6 +228,7 @@ Note: if we integrate llbuild deeply, we may have to merge build system and comp
 - [Discussion on lobsters one good general purpose language](https://lobste.rs/s/tx4s9v/opinion_on_what_s_good_general_purpose#c_yhwbu3)
 - [Great Nickel configurations from little merges grow](https://www.tweag.io/blog/2023-11-02-nickel-merge-system/)
 - [Pattern matching alg impl in Rust](https://github.com/yorickpeterse/pattern-matching-in-rust)
+- [MacoCaml: Staging Composable and Compilable Macros](https://xnning.github.io/papers/icfp23.pdf)
 
 ## Polymorphism and modules
 
@@ -359,6 +363,10 @@ Note: if we integrate llbuild deeply, we may have to merge build system and comp
 - [Raku is surprisingly good for CLIs](https://buttondown.email/hillelwayne/archive/raku-is-surprisingly-good-for-clis/)
 - [Preserving comments when parsing and formatting code](https://jayconrod.com/posts/129/preserving-comments-when-parsing-and-formatting-code)
 - [Egison's Pattern-matching via Logic Programming](http://blog.vmchale.com/article/curry-egison)
+- [Setenv is not Thread Safe and C Doesn't Want to Fix It](https://www.evanjones.ca/setenv-is-not-thread-safe.html)
+- [convenient shell-like programming in Haskell](https://github.com/luke-clifton/shh)
+- [Source filtering with file sets](https://www.tweag.io/blog/2023-11-28-file-sets/)
+- [Computed Properties for Haskell Records](https://alt-romes.github.io/posts/2023-11-30-computed-properties-for-haskell-records.html)
 
 ## Tooling
 
