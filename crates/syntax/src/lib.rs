@@ -15,7 +15,7 @@ pub type SyntaxKind = syntax_kind::SyntaxKind;
 
 pub fn clia_ts_parser() -> Parser {
     let mut parser = tree_sitter::Parser::new();
-    parser.set_language(tree_sitter_clia::language()).expect("Error loading Clia grammar");
+    parser.set_language(&tree_sitter_clia::language()).expect("Error loading Clia grammar");
     return parser;
 }
 

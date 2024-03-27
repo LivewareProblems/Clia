@@ -1,3 +1,4 @@
 binding.gyp
 target
 *.log
+node_modules
