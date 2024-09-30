@@ -15,6 +15,7 @@ Use the Github ToC in the top left hand corner to navigate
 - [A Taxonomy of Security Issues for understanding language-based security and modularity](https://docs.google.com/document/u/0/d/1cHSXziWOZ_44oSdyaKkJ-X0hTF_OhunIjgnrJ8oycss)
 - [Julia: A Fast Dynamic Language for Technical Computing](https://arxiv.org/abs/1209.5145)
 - [Caffeine cache design](https://github.com/ben-manes/caffeine/wiki/Design)
+- [Grayon Vectorized Interpreters talk](http://d22yoqkt46k26p.cloudfront.net/graydon/talks/VectorizedInterpretersTalk-2023-05-12.pdf)
 
 ## Parsing/Lexing
 
