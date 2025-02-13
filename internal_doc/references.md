@@ -16,6 +16,8 @@ Use the Github ToC in the top left hand corner to navigate
 - [Julia: A Fast Dynamic Language for Technical Computing](https://arxiv.org/abs/1209.5145)
 - [Caffeine cache design](https://github.com/ben-manes/caffeine/wiki/Design)
 - [Grayon Vectorized Interpreters talk](http://d22yoqkt46k26p.cloudfront.net/graydon/talks/VectorizedInterpretersTalk-2023-05-12.pdf)
+- <https://blog.sigplan.org/2025/01/29/parametric-subtyping-for-structural-parametric-polymorphism/>
+- <https://dl.acm.org/doi/10.1145/3689746>
 
 ## Parsing/Lexing
 
